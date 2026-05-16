@@ -1,45 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Employee Managements</title>
-</head>
-<body>
-
-<h1>Employee List</h1>
-
-<button onclick="loadEmployees()">Load Employees</button>
-
-<ul id="employees"></ul>
-
-<script>
-
-async function loadEmployees() {
-
-    const response = await fetch("http://3.109.207.118:8085/employees");
-
-    const data = await response.json();
-
-    const employeeList = document.getElementById("employees");
-
-    employeeList.innerHTML = "";
-
-    data.forEach(emp => {
-
-        const li = document.createElement("li");
-
-        li.innerText =
-            emp.id + " | " +
-            emp.name + " | " +
-            emp.department + " | " +
-            emp.salary;
-
-        employeeList.appendChild(li);
-
-    });
-
-}
-
-</script>
-
+<body style="background:black;color:white;">
+<h1>FRONTEND WORKING</h1>
 </body>
 </html>
